@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/31_curriculum.dart';
-import 'package:flutter_application_3/pageview.dart';
+import 'package:flutter_application_3/screens/31_curriculum.dart';
+import 'package:flutter_application_3/screens/32_reviews.dart';
+import 'package:flutter_application_3/screens/pageview.dart';
 
 
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily:"Concert",
         elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom(textStyle: TextStyle(fontFamily: "Concert")))
       ),
-      home:Pageview(),
+      home:PageView(),
     );
   }
 }
