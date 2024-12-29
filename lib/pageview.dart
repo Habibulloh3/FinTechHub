@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/appcolor.dart';
+
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Pageview extends StatefulWidget {
@@ -94,13 +94,13 @@ class _PageviewState extends State<Pageview> {
           Padding(
             padding: const EdgeInsets.only(bottom: 16.0, left: 400.0),
             child: FloatingActionButton(
-              backgroundColor: Appcolor.buttonbackcolor,
+              backgroundColor:Colors.blue,
               onPressed: _onNext,
-              child: const CircleAvatar(
-                backgroundColor: Appcolor.buttonbackcolor,
+              child: CircleAvatar(
+                backgroundColor: Colors.blue,
                 child: Icon(
                   Icons.arrow_forward,
-                  color: Appcolor.textbackcolor,
+                  color:Colors.white,
                 ),
               ),
             ),
