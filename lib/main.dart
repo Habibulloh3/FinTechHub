@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/.dart';
 
 
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         fontFamily:"Concert",
         elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom(textStyle: TextStyle(fontFamily: "Concert")))
       ),
-      home:MyApp(),
+      home:MyWidget(),
     );
   }
 }
