@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/.dart';
+import 'package:flutter_application_3/31_curriculum.dart';
+import 'package:flutter_application_3/pageview.dart';
+
 
 
 
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily:"Concert",
         elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom(textStyle: TextStyle(fontFamily: "Concert")))
       ),
-      home:MyWidget(),
+      home:Pageview(),
     );
   }
 }
