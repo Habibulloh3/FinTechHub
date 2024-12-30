@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/widgets/categories.dart';
 
 class ReviewsScreen extends StatelessWidget {
-  const ReviewsScreen({super.key});
-
+  ReviewsScreen({super.key});
+  final List<String> retings = [
+    'Excellent',
+    'Good',
+    'Average',
+    'Below Average',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,14 +19,14 @@ class ReviewsScreen extends StatelessWidget {
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
         ),
       ),
-      body:  Center(
+      body: Center(
         child: Column(
           children: [
-            Text(
+            const Text(
               "4.8",
-              style: TextStyle(fontSize: 38, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 StarWidget(),
@@ -30,37 +36,110 @@ class ReviewsScreen extends StatelessWidget {
                 StarWidget(),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               "Based on 448 Reviews",
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
-            ),Row(children: [Container(child: Text("Excellect"),)],),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 35),
+              child: Container(
+                height: 35,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return CategoriesBotton(title: retings[index]);
+                  },
+                  separatorBuilder: (BuildContext context, int index) {
+                    return const SizedBox(
+                      width: 10,
+                    );
+                  },
+                  itemCount: retings.length,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: Padding(  padding: EdgeInsets.symmetric(horizontal: 35),
+                child: Container(
+                  child: ListView.separated(
+                    itemBuilder: (context, index) {
+                      return Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color: Colors.white,boxShadow:[  BoxShadow(
+        color: Colors.black.withOpacity(0.2), 
+        offset: Offset(4, 4), 
+        blurRadius: 8,  
+        spreadRadius: 2,  
+      ),] ),
+                        padding: EdgeInsets.symmetric(vertical: 10),
+                        child: Column(
+                          children: [
+                            ListTile(
+                              leading: CircleAvatar(
+                                radius: 25,
+                                backgroundColor: Colors.black,
+                              ),
+                              title: Row(
+                                children: [
+                                  Text(
+                                    "Heather S. McMullen",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Spacer(),
+                                  Container(
+                                      padding: EdgeInsets.symmetric(
+                                          horizontal: 7, vertical: 3),
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Colors.blue, width: 2),
+                                          color: const Color.fromARGB(
+                                              255, 186, 210, 229),
+                                          borderRadius:
+                                              BorderRadius.circular(16)),
+                                      child: Row(
+                                        children: [
+                                          Icon(Icons.star,
+                                              color: Colors.yellow),
+                                          Text("4.0")
+                                        ],
+                                      ))
+                                ],
+                              ),
+                              subtitle: Text(
+                                  "The Course is Very Good dolor sit amet, con sect tur adipiscing elit. Naturales divitias dixit parab les esse.."),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [Icon(Icons.favorite_outline),SizedBox(width: 10,), Text("404",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),SizedBox(width: 50,),Text("2 Weeks Agos",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)],
+                            )
+                          ],
+                        ),
+                      );
+                    },
+                    separatorBuilder: (BuildContext context, int index) {
+                      return SizedBox(
+                        height: 10,
+                      );
+                    },
+                    itemCount: 10,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class StarWidget extends StatelessWidget {
-  const StarWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ShaderMask(
-      shaderCallback: (bounds) => const LinearGradient(
-        colors: [Colors.red, Colors.yellow],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).createShader(bounds),
-      child: const Icon(
-        Icons.star,
-        size: 35,
-        color: Colors.white,
       ),
     );
   }
