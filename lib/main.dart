@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily:"Concert",
         elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom(textStyle: TextStyle(fontFamily: "Concert")))
       ),
-      home:PageView(),
+      home:ReviewsScreen(),
     );
   }
 }
