@@ -51,7 +51,7 @@ class _WriteAReviewState extends State<WriteAReview> {
                       SizedBox(
                         height: 10,
                       ),
-                      Text("Setup your Graphic D")
+                      Text("Setup your Graphic D",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)
                     ],
                   ),
                 ],
@@ -103,14 +103,14 @@ class _WriteAReviewState extends State<WriteAReview> {
           const  Text(
               "Write you Review",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),const SizedBox(height: 5,), Container(height: 40, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
+            ),const SizedBox(height: 5,), Container( height: 100, decoration: BoxDecoration( color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.2),
                       offset:const Offset(4, 4),
                       blurRadius: 8,
                       spreadRadius: 2,
                     ),
-                  ],), child:  TextFormField(),),const SizedBox(height: 50,),SizedBox(
+                  ],), child:  TextFormField(maxLines: 2,),),const SizedBox(height: 50,),SizedBox(
           height: 70,
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(padding:const EdgeInsets.only(left: 40,right: 10), backgroundColor: Colors.blue),
@@ -126,7 +126,7 @@ class _WriteAReviewState extends State<WriteAReview> {
                         onPressed: () {}, icon:const Icon( Icons.arrow_right_alt_rounded,color: Colors.blue,size: 35,)),
                   ),
                 ],
-              ))),
+              ),),),
             
           ],
         ),
