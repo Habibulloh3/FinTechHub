@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/appcolor.dart';
+import 'package:flutter_application_3/appcolor.dart';import 'package:flutter_application_3/appcolor.dart';
+import 'package:flutter_application_3/loginpage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Pageview extends StatefulWidget {
@@ -22,7 +23,7 @@ class _PageviewState extends State<Pageview> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => const Loginpage(),
         ),
       );
     }
@@ -45,7 +46,7 @@ class _PageviewState extends State<Pageview> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (context) => const Loginpage(),
                 ),
               );
             },
@@ -141,21 +142,6 @@ class OnboardingPage extends StatelessWidget {
           ),
           const Spacer(),
         ],
-      ),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home Screen')),
-      body: const Center(
-        child:
-            Text('Welcome to the Home Screen!', style: TextStyle(fontSize: 20)),
       ),
     );
   }
