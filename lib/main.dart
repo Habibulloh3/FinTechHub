@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/screens/31_curriculum.dart';
-import 'package:flutter_application_3/screens/32_reviews.dart';
-import 'package:flutter_application_3/screens/33_write_a_review.dart';
-import 'package:flutter_application_3/screens/34_payment_methods.dart';
-import 'package:flutter_application_3/screens/pageview.dart';
+
 
 
 
@@ -16,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo',debugShowCheckedModeBanner:false,
       theme: ThemeData(
         fontFamily:"Concert",
         elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom(textStyle: TextStyle(fontFamily: "Concert")))
       ),
-      home:PaymentMethodsScreen(),
+      home:MyWidget(),
     );
   }
 }
