@@ -1,4 +1,3 @@
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/appcolor.dart';
@@ -17,11 +16,12 @@ class _FillProfileState extends State<FillProfile> {
       barrierDismissible: false,
       builder: (context) {
         return AlertDialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-             Image.asset('assets/images/Group 10 (2).png'),
+              Image.asset('assets/images/Group 10 (2).png'),
               const SizedBox(height: 20),
               const Text(
                 "Congratulations",
@@ -34,16 +34,15 @@ class _FillProfileState extends State<FillProfile> {
                 style: TextStyle(fontSize: 14),
               ),
               const SizedBox(height: 20),
-     const CircularProgressIndicator.adaptive()
+              const CircularProgressIndicator.adaptive()
             ],
           ),
         );
       },
     );
 
-  
     Timer(const Duration(seconds: 5), () {
-      Navigator.pop(context); 
+      Navigator.pop(context);
       Navigator.push(
           context, MaterialPageRoute(builder: (_) => const HomePage()));
     });
@@ -73,12 +72,11 @@ class _FillProfileState extends State<FillProfile> {
               child: Icon(Icons.person, size: 80),
             ),
             const SizedBox(height: 20),
-      
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Full name',
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10), 
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
@@ -110,50 +108,49 @@ class _FillProfileState extends State<FillProfile> {
               ),
             ),
             const SizedBox(height: 15),
-      
             TextFormField(
               keyboardType: TextInputType.phone,
-
-
-decoration: InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Phone number',
                 prefixText: '+',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-            ),const SizedBox(height: 80,),
-      ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(350, 60),
-                  maximumSize: const Size(350, 60),
-                  backgroundColor: Appcolor.buttonbackcolor),
-              onPressed:  showAlertAndRedirect,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Center(
-                    child: Text(
-                      '              Sign In',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFFFFFFFF)),
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(350, 60),
+                    maximumSize: const Size(350, 60),
+                    backgroundColor: Appcolor.buttonbackcolor),
+                onPressed: showAlertAndRedirect,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text(
+                        '              Sign In',
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFFFFFFFF)),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.arrow_forward,
-                      color: Appcolor.buttonbackcolor,
+                    SizedBox(
+                      width: 130,
                     ),
-                  )
-                ],
-              )),
-          
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.arrow_forward,
+                        color: Appcolor.buttonbackcolor,
+                      ),
+                    )
+                  ],
+                )),
             const SizedBox(height: 20),
           ],
         ),
@@ -167,9 +164,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-   
-      
-    );
+    return const Scaffold();
   }
 }
