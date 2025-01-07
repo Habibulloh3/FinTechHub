@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/appcolor.dart';import 'package:flutter_application_3/appcolor.dart';
+import 'package:flutter_application_3/appcolor.dart';
+import 'package:flutter_application_3/appcolor.dart';
 import 'package:flutter_application_3/loginpage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -88,7 +89,7 @@ class _PageviewState extends State<Pageview> {
               dotHeight: 8,
               dotWidth: 8,
               spacing: 16,
-              activeDotColor: Colors.blue,
+              activeDotColor: Appcolor.buttonbackcolor,
               dotColor: Colors.grey,
             ),
           ),
